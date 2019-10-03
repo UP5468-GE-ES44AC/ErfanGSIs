@@ -181,17 +181,6 @@ if grep -qF 'mkdir /data/.fps 0770 system fingerp' vendor/etc/init/hw/init.mmi.r
     chown system:9015 /sys/devices/soc/soc:fpc_fpc1020/irq_cnt
 fi
 
-if getprop ro.vendor.build.fingerprint | grep -q -i \
-    -e xiaomi/clover -e xiaomi/wayne -e xiaomi/sakura \
-    -e xiaomi/nitrogen -e xiaomi/whyred -e xiaomi/platina \
-    -e xiaomi/ysl -e nubia/nx60 -e nubia/nx61 -e xiaomi/tulip -e xiaomi/lavender; then
-    setprop persist.sys.qcom-brightness "$(cat /sys/class/leds/lcd-backlight/max_brightness)"
-fi
-
-if getprop ro.vendor.product.device |grep -iq -e RMX1801 -e RMX1803 -e RMX1807;then	
-    setprop persist.sys.qcom-brightness "$(cat /sys/class/leds/lcd-backlight/max_brightness)"
-fi
-
 if getprop ro.vendor.build.fingerprint | grep -iq \
     -e Xiaomi/beryllium/beryllium -e Xiaomi/sirius/sirius \
     -e Xiaomi/dipper/dipper -e Xiaomi/ursa/ursa -e Xiaomi/polaris/polaris \
@@ -230,6 +219,10 @@ if getprop ro.vendor.build.fingerprint | grep -q -i -e xiaomi/wayne -e xiaomi/ja
     setprop persist.imx376_sunny.light.lux 280
     setprop persist.imx376_ofilm.low.lux 310
     setprop persist.imx376_ofilm.light.lux 280
+    setprop persist.camera.HAL3.enabled 1
+    setprop persist.vendor.qti.telephony.vt_cam_interface 1
+    setprop persist.vendor.camera.expose.aux 1
+    setprop persist.vendor.camera.HAL3.enabled 1
     echo "none" > /sys/class/leds/led:torch_2/trigger
 fi
 
