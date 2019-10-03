@@ -1,17 +1,13 @@
+##Modified for wayne,do not use this tool to port for other device!##
+
 ## Requirements
     Linux or Mac
-
-## Released GSIs
-Download links: https://mirrors.lolinet.com/firmware/gsi/  
-XDA thread: https://forum.xda-developers.com/project-treble/trebleenabled-device-development/pie-erfan-gsi-ports-t3906486  
-Telegram group: https://t.me/ErfanGSIs  
-Telegram channel: https://t.me/ErfanGSI  
 
 ## How to use
 
 ### Download tools
 ```
-git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git
+git clone --recurse-submodules https://github.com/UP5468-GE-ES44AC/ErfanGSIs.git
 cd ErfanGSIs
 ```
 
@@ -19,8 +15,10 @@ cd ErfanGSIs
     bash setup.sh
 
 ### Generating GSI from stock firmware URL
-Example: for making OxygenOS of oneplus 7 pro firmware, you can use this command
+Example: for making Pixel of Pixel2XL firmware, you can use this command
 ```
-./url2GSI.sh https://oxygenos.oneplus.net/OnePlus7ProOxygen_21.O.07_OTA_007_all_1905120542_fc480574576b4843.zip OxygenOS
+./url2GSI.sh https://dl.google.com/dl/android/aosp/taimen-ota-qp1a.190711.020-4757f073.zip Pixel
 ```
 check url2GSI.sh for more info
+
+*Note:Larger RAM machine will increase success rate of output GSIs.
