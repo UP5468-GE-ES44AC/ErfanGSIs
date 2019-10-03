@@ -1,4 +1,5 @@
-##Modified for wayne,do not use this tool to port for other device!##
+## Modified for wayne,do not use this tool to port for other device!
+## Modified for porting Pixel2&Pixel2XL’s firmware to wayne, other firmware not tested.
 
 ## Requirements
     Linux or Mac
