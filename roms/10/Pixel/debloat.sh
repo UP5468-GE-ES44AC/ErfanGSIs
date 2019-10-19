@@ -9,7 +9,6 @@ rm -rf $1/product/app/YouTube
 rm -rf $1/app/datastatusnotification
 rm -rf $1/app/QAS_DVC_MSP_VZW
 rm -rf $1/app/VZWAPNLib
-rm -rf $1/app/ims
 rm -rf $1/app/vzw_msdc_api
 rm -rf $1/priv-app/CNEService
 rm -rf $1/priv-app/DMService
@@ -29,3 +28,6 @@ rm -rf $1/product/priv-app/WfcActivation
 
 # Fix Files-DocumentsUI
 rm -rf $1/product/overlay/PixelDocumentsUIOverlay
+rm -rf $1/product/app/Music2
+rm -rf $1/product/app/Photos
+rm -rf $1/product/app/Videos
