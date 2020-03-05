@@ -1,2 +1,0 @@
-on init
-    exec - root -- /system/bin/permissiver.sh
